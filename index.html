@@ -68,6 +68,106 @@
     
     
     
+    <article id="post-Mac-hexo-2-theme" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/19/Mac-hexo-2-theme/"
+    >Hexo 主题安装</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/19/Mac-hexo-2-theme/" class="article-date">
+  <time datetime="2020-02-19T14:24:14.000Z" itemprop="datePublished">2020-02-19</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>这篇介绍如果安装自己喜欢的Hexo主题包.</p>
+<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>Hexo初始化后默认自带landscape主题包，功能有限页面简单。如果大家想找自己喜欢的风格主题，可以直接百度搜索。</p>
+<p>这里贴出知乎上的一个Hexo theme链接：<code>https://www.zhihu.com/question/24422335/answers/updated</code>供大家选择。</p>
+<p>本up主选了一个名为：<a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">Ayer</a> 的主题，是一个干净且优雅的Hexo主题，自带响应式，加载速度很快，该有的功能都有，可配置项也很多，非常适合作为你的博客主题。</p>
+<p>接下来就带着大家一步步安装和配置该主题。</p>
+<h3 id="Ayer主题安装"><a href="#Ayer主题安装" class="headerlink" title="Ayer主题安装"></a>Ayer主题安装</h3><p>使用<code>terminal</code>进入我们Hexo的主目录下面。我创建的博客主目录是 <code>MyHexoBlog</code>。</p>
+<p>输入下面command</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> MyHexoBlog</span><br></pre></td></tr></table></figure>
+
+<p>然后进入themes目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes</span><br></pre></td></tr></table></figure>
+
+<p>接着我们就来获取安装主题包，输入下面command</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
+
+<p>其中  <code>https://github.com/Shen-Yu/hexo-theme-ayer.git</code>是我们要获取主题包的地址，<code>themes/ayer</code> 是我们要安装主题的本地路径。  <em>参考</em><a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">^1</a></p>
+<p>执行上述command结束之后，会显示<code>done</code>。</p>
+<h3 id="Ayer主题配置"><a href="#Ayer主题配置" class="headerlink" title="Ayer主题配置"></a>Ayer主题配置</h3><p>进入主目录下，找到<code>_config.yml</code>文件，编辑打开 查找 <code>theme</code>将其设置为：<code>them: ayer</code></p>
+<p><img src="/2020/02/19/Mac-hexo-2-theme/Mac_hexo_theme.png" alt="Mac_hexo_theme"></p>
+<p>至此我们的主题就按照好了，现在可以启动服务来预览下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>关于主题其他的配置，如站点名称，导航栏等信息可以参考该主题包的开发者的配置说明来操作：</p>
+<p><a href="https://shen-yu.gitee.io/2019/ayer/" target="_blank" rel="noopener">Ayer中文说明</a> </p>
+</blockquote>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
     <article id="post-Mac-hexo-1-install" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -401,7 +501,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+      <a class="nav-item-link" href="/tags/travel">旅行</a>
     </li>
     
     <li class="nav-item">
@@ -409,7 +509,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories/welove/">WeLove</a>
+      <a class="nav-item-link" href="/categories/welove">WeLove</a>
     </li>
     
     <li class="nav-item">

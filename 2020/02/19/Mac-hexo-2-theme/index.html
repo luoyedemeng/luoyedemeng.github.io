@@ -10,7 +10,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Hello World |  HELLO WINTER .
+    Hexo 主题安装 |  HELLO WINTER .
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -35,7 +35,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-hello-world" class="article article-type-post" itemscope
+  <article id="post-Mac-hexo-2-theme" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -43,7 +43,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Hello World
+  Hexo 主题安装
 </h1>
   
 
@@ -52,10 +52,14 @@
 
     
     <div class="article-meta">
-      <a href="/2020/02/17/hello-world/" class="article-date">
-  <time datetime="2020-02-17T07:00:34.869Z" itemprop="datePublished">2020-02-17</time>
+      <a href="/2020/02/19/Mac-hexo-2-theme/" class="article-date">
+  <time datetime="2020-02-19T14:24:14.000Z" itemprop="datePublished">2020-02-19</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+  </div>
+
       
       
 <div class="word_count">
@@ -63,7 +67,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">73字</span>
+            <span class="post-count">406字</span>
         </span>
     </span>
 
@@ -99,19 +103,34 @@
       
 
       
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+      <p>这篇介绍如果安装自己喜欢的Hexo主题包.</p>
+<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>Hexo初始化后默认自带landscape主题包，功能有限页面简单。如果大家想找自己喜欢的风格主题，可以直接百度搜索。</p>
+<p>这里贴出知乎上的一个Hexo theme链接：<code>https://www.zhihu.com/question/24422335/answers/updated</code>供大家选择。</p>
+<p>本up主选了一个名为：<a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">Ayer</a> 的主题，是一个干净且优雅的Hexo主题，自带响应式，加载速度很快，该有的功能都有，可配置项也很多，非常适合作为你的博客主题。</p>
+<p>接下来就带着大家一步步安装和配置该主题。</p>
+<h3 id="Ayer主题安装"><a href="#Ayer主题安装" class="headerlink" title="Ayer主题安装"></a>Ayer主题安装</h3><p>使用<code>terminal</code>进入我们Hexo的主目录下面。我创建的博客主目录是 <code>MyHexoBlog</code>。</p>
+<p>输入下面command</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> MyHexoBlog</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>然后进入themes目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>接着我们就来获取安装主题包，输入下面command</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>其中  <code>https://github.com/Shen-Yu/hexo-theme-ayer.git</code>是我们要获取主题包的地址，<code>themes/ayer</code> 是我们要安装主题的本地路径。  <em>参考</em><a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">^1</a></p>
+<p>执行上述command结束之后，会显示<code>done</code>。</p>
+<h3 id="Ayer主题配置"><a href="#Ayer主题配置" class="headerlink" title="Ayer主题配置"></a>Ayer主题配置</h3><p>进入主目录下，找到<code>_config.yml</code>文件，编辑打开 查找 <code>theme</code>将其设置为：<code>them: ayer</code></p>
+<p><img src="/2020/02/19/Mac-hexo-2-theme/Mac_hexo_theme.png" alt="Mac_hexo_theme"></p>
+<p>至此我们的主题就按照好了，现在可以启动服务来预览下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+
+<blockquote>
+<p>关于主题其他的配置，如站点名称，导航栏等信息可以参考该主题包的开发者的配置说明来操作：</p>
+<p><a href="https://shen-yu.gitee.io/2019/ayer/" target="_blank" rel="noopener">Ayer中文说明</a> </p>
+</blockquote>
 
       
       <!-- reward -->
@@ -181,13 +200,15 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://luoyedemeng.github.io/2020/02/17/hello-world/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://luoyedemeng.github.io/2020/02/19/Mac-hexo-2-theme/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
 
     </footer>
 
@@ -197,15 +218,11 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/02/18/Mac-hexo/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Mac上部署Hexo
-          
-        </div>
-      </a>
     
+      <a href="/2020/02/18/Mac-hexo-1-install/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Hexo 安装</div>
+      </a>
     
   </nav>
 
