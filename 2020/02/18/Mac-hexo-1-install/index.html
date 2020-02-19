@@ -10,7 +10,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Hello World |  HELLO WINTER .
+    Hexo 安装 |  HELLO WINTER .
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -35,7 +35,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-hello-world" class="article article-type-post" itemscope
+  <article id="post-Mac-hexo-1-install" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -43,7 +43,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Hello World
+  Hexo 安装
 </h1>
   
 
@@ -52,10 +52,14 @@
 
     
     <div class="article-meta">
-      <a href="/2020/02/17/hello-world/" class="article-date">
-  <time datetime="2020-02-17T07:00:34.869Z" itemprop="datePublished">2020-02-17</time>
+      <a href="/2020/02/18/Mac-hexo-1-install/" class="article-date">
+  <time datetime="2020-02-18T10:31:58.000Z" itemprop="datePublished">2020-02-18</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+  </div>
+
       
       
 <div class="word_count">
@@ -63,7 +67,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">73字</span>
+            <span class="post-count">446字</span>
         </span>
     </span>
 
@@ -99,19 +103,65 @@
       
 
       
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+      <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>安装Hexo之前，需要先安装node和npm。</p>
+<blockquote>
+<p>由于本up主之前学习的原因已经单独安装过node,是通过官网下载pkg安装包安装.但是在安装hexo时出现了报错，提示没有权限写入一些文件夹。但不影响，我们会通过sudo 提升权限来解决，下面文章中会讲到。</p>
+</blockquote>
+<h3 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h3><p>没有安装过Node的同学建议使用nvm(node version manager)来安装Node.js和npm.   <em>参考</em><a href="https://blog.csdn.net/weixin_41160054/article/details/89531921" target="_blank" rel="noopener">^1</a></p>
+<ul>
+<li>安装nvm</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>v0.35.2 是版本号，详见：<a href="https://github.com/nvm-sh/nvm/blob/master/README.md" target="_blank" rel="noopener">https://github.com/nvm-sh/nvm/blob/master/README.md</a></p>
+</blockquote>
+<p>然后，输入代码查看是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ <span class="built_in">command</span> -v nvm</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>会出现nvm,如果没有关掉<code>termianl</code>重新启动</p>
+</blockquote>
+<ul>
+<li>安装node</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ nvm install node</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>输入代码查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ node -v</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+<a id="more"></a>
+
+<h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>输入代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果你是使用pkg安装包安装的node,执行上面命令安装hexo时可能会出现 <code>checkPermissions Missing write access to /Users/...</code>权限错误。</p>
+<p>可使用如下命令码安装：<code>sudo npm install --unsafe-perm --verbose -g hexo</code> 然后 <code>hexo version</code>看到版本号 安装成功！<em>参考</em><a href="https://www.jianshu.com/p/34b8c1e7742b" target="_blank" rel="noopener">^2</a></p>
+</blockquote>
+<p><img src="/2020/02/18/Mac-hexo-1-install/mac_hexo_install.png" alt="mac_hexo_install"><br><img src="/2020/02/18/Mac-hexo-1-install/mac_hexo_install_ok.png" alt="mac_hexo_install_ok"></p>
+<h3 id="Hexo建站"><a href="#Hexo建站" class="headerlink" title="Hexo建站"></a>Hexo建站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ hexo init MyHexoBlog</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>初始化Hexo, <code>MyHexoBlog</code>是站点名称,生成根目录的文件夹名称，可自定义。执行上述代码如果出现 INFO Install dependencies 不用管</p>
+</blockquote>
+<p><img src="/2020/02/18/Mac-hexo-1-install/mac_hexo_init_ok.png" alt="mac_hexo_init_ok"></p>
+<p>接着输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> MyHexoBlog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<p>建完后,指定文件夹的目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>具体文件及文件夹的说明可参考官网，或 <em>参考</em><a href="https://blog.csdn.net/qq_34290780/article/details/78230706" target="_blank" rel="noopener">^3</a></p>
+</blockquote>
+<h3 id="Hexo测试"><a href="#Hexo测试" class="headerlink" title="Hexo测试"></a>Hexo测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> MyHexoBlog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>会提示一下成功信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
+<p>现在你就可以进入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 查看你搭建的Hexo 个人站点了。</p>
 
       
       <!-- reward -->
@@ -181,13 +231,15 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://luoyedemeng.github.io/2020/02/17/hello-world/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://luoyedemeng.github.io/2020/02/18/Mac-hexo-1-install/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
 
     </footer>
 
@@ -197,15 +249,11 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/02/18/Mac-hexo/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Mac上部署Hexo
-          
-        </div>
-      </a>
     
+      <a href="/2020/02/18/Mac-hexo/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Mac上部署Hexo</div>
+      </a>
     
   </nav>
 

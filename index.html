@@ -4,8 +4,10 @@
 <head>
   <meta charset="utf-8" />
    
-  <meta name="keywords" content="工作 生活 学习 We&#39;re in love" />
+  <meta name="keywords" content="工作,生活,学习,旅行，We&#39;re in love" />
    
+  <meta name="description" content="Someting to do,Someting to lvoe,Somting to hope for" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
      HELLO WINTER .
@@ -65,6 +67,192 @@
     
     
     
+    
+    <article id="post-Mac-hexo-1-install" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/18/Mac-hexo-1-install/"
+    >Hexo 安装</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/18/Mac-hexo-1-install/" class="article-date">
+  <time datetime="2020-02-18T10:31:58.000Z" itemprop="datePublished">2020-02-18</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>安装Hexo之前，需要先安装node和npm。</p>
+<blockquote>
+<p>由于本up主之前学习的原因已经单独安装过node,是通过官网下载pkg安装包安装.但是在安装hexo时出现了报错，提示没有权限写入一些文件夹。但不影响，我们会通过sudo 提升权限来解决，下面文章中会讲到。</p>
+</blockquote>
+<h3 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h3><p>没有安装过Node的同学建议使用nvm(node version manager)来安装Node.js和npm.   <em>参考</em><a href="https://blog.csdn.net/weixin_41160054/article/details/89531921" target="_blank" rel="noopener">^1</a></p>
+<ul>
+<li>安装nvm</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>v0.35.2 是版本号，详见：<a href="https://github.com/nvm-sh/nvm/blob/master/README.md" target="_blank" rel="noopener">https://github.com/nvm-sh/nvm/blob/master/README.md</a></p>
+</blockquote>
+<p>然后，输入代码查看是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ <span class="built_in">command</span> -v nvm</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>会出现nvm,如果没有关掉<code>termianl</code>重新启动</p>
+</blockquote>
+<ul>
+<li>安装node</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ nvm install node</span><br></pre></td></tr></table></figure>
+
+<p>输入代码查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ node -v</span><br></pre></td></tr></table></figure>
+      
+      <a class="article-more-link" href="/2020/02/18/Mac-hexo-1-install/">Read more...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-Mac-hexo" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/18/Mac-hexo/"
+    >Mac上部署Hexo</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/18/Mac-hexo/" class="article-date">
+  <time datetime="2020-02-18T07:42:42.000Z" itemprop="datePublished">2020-02-18</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <blockquote>
+<p>hexo 是一个轻量级 简易且高逼格的博客生成工具，基于node.js实现。通过markdown编写文章，生成静态html页面 将其上传到我们服务器或github.</p>
+</blockquote>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><!--本人很懒，从学校出来之后就很少写blog了，加上现在各种社交和娱乐App充斥着我们的生活，也很难可以静下心来再去写一些东西。一直希望有一个属于自己的空间，可以记录生活，整理学习笔记，分享自己的点点滴滴。 恰逢疫情时期，呆在家中有时间，便趁此机会搭建了这套Hexo博客。愿景很美好 希望这是一个好的开始。-->
+
+<p>经过两天的网上搜集以及踩坑，终于顺利部署成功。</p>
+<p>本系列将分五篇文章来讲解如何一步步在Mac上搭建Hexo,也希望可以给那些想搭建或者正在搭建亦或者搭建过程中出现问题的同学一些帮助。</p>
+<ul>
+<li><a href="../../../../2020/02/18/Mac-hexo-1-install/">Hexo 安装</a></li>
+<li><a href="../../../../2020/02/19//Mac-hexo-2-theme/">Hexo 主题安装</a></li>
+<li><a href="../../../../2020/02/18//Mac-hexo-3-github/">Hexo GitHub设置</a></li>
+<li><a href="../../../../2020/02/18//Mac-hexo-4-article/">Hexo 文章发布</a></li>
+<li><a href="../../../../2020/02/18//Mac-hexo-5-plugin/">Hexo 其他插件</a></li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
     
     <article id="post-hello-world" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
@@ -217,7 +405,11 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="http://www.baidu.com" target="_blank" rel="noopener">摄影</a>
+      <a class="nav-item-link" href="/categories/gallery">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/welove/">WeLove</a>
     </li>
     
     <li class="nav-item">
@@ -297,7 +489,7 @@
     var typed = new Typed("#subtitle", {
     strings: ['面朝大海，春暖花开','愿你一生努力，一生被爱','想要的都拥有，得不到的都释怀'],
     startDelay: 0,
-    typeSpeed: 200,
+    typeSpeed: 250,
     loop: true,
     backSpeed: 100,
     showCursor: true
