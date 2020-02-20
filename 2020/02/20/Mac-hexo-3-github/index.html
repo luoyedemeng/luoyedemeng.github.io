@@ -67,7 +67,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">904字</span>
+            <span class="post-count">1.1k字</span>
         </span>
     </span>
 
@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3分钟</span>
+            <span class="post-count">4分钟</span>
         </span>
     </span>
 </div>
@@ -150,6 +150,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>再执行配置命令<code>hexo deploy</code>就可以在浏览器中打开链接<code>http://user_name.github.io/</code> 就可以看到自己的博客了。（<em>参考问题2</em>）</p>
+<h3 id="设置自己的域名"><a href="#设置自己的域名" class="headerlink" title="设置自己的域名"></a>设置自己的域名</h3><p>在Hexo的source目录下添加CNAME文件，没有任何后缀，在文件中填写要绑定的域名，如<code>www.user_name.net</code>。<br>然后设置域名解析，添加解析设置，纪录类型为CNAME,主机纪录www，解析线路为默认，然后纪录值填写github项目名称，如<code>user_name.github.io</code>，保存。<br>在Hexo中重新部署生成即可用自己的域名访问博客了。</p>
+<p>也可以不用上述操作，添加解析设置时，选择记录类型为A(执行IP地址)。</p>
+<p>参考地址： <a href="https://www.jianshu.com/p/da20ddc03cdf" target="_blank" rel="noopener">域名绑定</a></p>
 <h3 id="出现问题"><a href="#出现问题" class="headerlink" title="出现问题"></a>出现问题</h3><ol>
 <li><p>安装Deployer插件时up主这边报错，提示 <code>No  Xcode or CLT  version detected !</code> </p>
 <p><img src="/2020/02/20/Mac-hexo-3-github/mac_hexo_deployer_error.png" alt="mac_hexo_deployer_error"></p>
