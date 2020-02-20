@@ -10,7 +10,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Hexo 主题安装 |  HELLO WINTER .
+    Hexo GitHub设置 |  HELLO WINTER .
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -35,7 +35,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-Mac-hexo-2-theme" class="article article-type-post" itemscope
+  <article id="post-Mac-hexo-3-github" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -43,7 +43,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Hexo 主题安装
+  Hexo GitHub设置
 </h1>
   
 
@@ -52,8 +52,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/02/19/Mac-hexo-2-theme/" class="article-date">
-  <time datetime="2020-02-19T14:24:14.000Z" itemprop="datePublished">2020-02-19</time>
+      <a href="/2020/02/20/Mac-hexo-3-github/" class="article-date">
+  <time datetime="2020-02-20T01:34:29.000Z" itemprop="datePublished">2020-02-20</time>
 </a>
       
   <div class="article-category">
@@ -67,7 +67,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">406字</span>
+            <span class="post-count">904字</span>
         </span>
     </span>
 
@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
+            <span class="post-count">3分钟</span>
         </span>
     </span>
 </div>
@@ -103,36 +103,75 @@
       
 
       
-      <p>这篇介绍如果安装自己喜欢的Hexo主题包.</p>
-<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>Hexo初始化后默认自带landscape主题包，功能有限页面简单。如果大家想找自己喜欢的风格主题，可以直接百度搜索。</p>
-<p>这里贴出知乎上的一个Hexo theme链接：<code>https://www.zhihu.com/question/24422335/answers/updated</code>供大家选择。</p>
-<p>本up主选了一个名为：<a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">Ayer</a> 的主题，是一个干净且优雅的Hexo主题，自带响应式，加载速度很快，该有的功能都有，可配置项也很多，非常适合作为你的博客主题。</p>
-<p>接下来就带着大家一步步安装和配置该主题。</p>
-<h3 id="Ayer主题安装"><a href="#Ayer主题安装" class="headerlink" title="Ayer主题安装"></a>Ayer主题安装</h3><p>使用<code>terminal</code>进入我们Hexo的主目录下面。我创建的博客主目录是 <code>MyHexoBlog</code>。</p>
-<p>输入下面command</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> MyHexoBlog</span><br></pre></td></tr></table></figure>
+      <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>这篇将介绍如何将自己的Hexo 博客，推送到Github 上供外网访问。 当然有条件的同学可以自己搭建服务器将Hexo生成的静态文件直接FTP部署到服务器上即可。</p>
+<h3 id="GitHub设置"><a href="#GitHub设置" class="headerlink" title="GitHub设置"></a>GitHub设置</h3><ul>
+<li><p>创建Repository</p>
+<p>注册账号，然后创建Repository，仓库名称必须是 <strong><code>your_user_name.github.io</code></strong>，这里我的Github用户名是 <strong><code>luoyedemeng</code></strong> ,则仓库名称是 <strong><code>luoyedemeng.github.io</code></strong>。</p>
+<p><img src="/2020/02/20/Mac-hexo-3-github/mac_hexo_github_repository.png" alt="mac_hexo_github_repository"></p>
+</li>
+<li><p>创建SSH Keys</p>
+<p>打开Mac terminal,输入下面 command</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
 
-<p>然后进入themes目录下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes</span><br></pre></td></tr></table></figure>
-
-<p>接着我们就来获取安装主题包，输入下面command</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
-
-<p>其中  <code>https://github.com/Shen-Yu/hexo-theme-ayer.git</code>是我们要获取主题包的地址，<code>themes/ayer</code> 是我们要安装主题的本地路径。  <em>参考</em><a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">^1</a></p>
-<p>执行上述command结束之后，会显示<code>done</code>。</p>
+<p>如果出现下图中的id_rsa.pub/id_ecdsa.pub/id_ed25519.pub 任何一个说明你电脑已有公钥，可跳过下面创建SSH的步骤</p>
+<p><img src="/2020/02/20/Mac-hexo-3-github/Mac_hexo_ssh_check.png" alt="Mac_hexo_ssh_check"></p>
 <a id="more"></a>
 
-<h3 id="Ayer主题配置"><a href="#Ayer主题配置" class="headerlink" title="Ayer主题配置"></a>Ayer主题配置</h3><p>进入主目录下，找到<code>_config.yml</code>文件，编辑打开 查找 <code>theme</code>将其设置为：<code>them: ayer</code></p>
-<p><img src="/2020/02/19/Mac-hexo-2-theme/Mac_hexo_theme.png" alt="Mac_hexo_theme"></p>
-<p>至此我们的主题就按照好了，现在可以启动服务来预览下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>如果提示 <code>no such file or directory</code>说明你是第一次使用git，需要创建SSH，按照下面步骤继续操作</p>
+<p>输入下面command ,邮箱是你github email地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
 
+<p>接下来的所有输入默认直接 Press Enter即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"你的邮箱地址"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车&gt;</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):&lt;输入加密串&gt;&lt;如不想设置密码可直接回车表示为空&gt;</span><br><span class="line">Enter same passphrase again:&lt;再次输入加密串&gt;&lt;接着回车确认&gt;</span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /Users/你的名字/.ssh/id_rsa).</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /Users/你的名字/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">43:c5:5b:5f:b1:f1:50:43:ad:20:a6:92:6a:1f:9a:3a <span class="string">"你的邮箱地址"</span></span><br></pre></td></tr></table></figure>
 
-
+<p>最后出现类似长方形的字符画即表示成功，接下来将生成好的SSH Key添加进GitHub。</p>
+</li>
+<li><p>配置SSH Keys</p>
+<p>打开本地刚生成的.ssh/id_rsa.pub，默认目录：<code>/Users/your_user_directory/.ssh/id_rsa</code> ，如果你生成SSH Key时自定义了路径，请到相应的目录下。</p>
 <blockquote>
-<p>关于主题其他的配置，如站点名称，导航栏等信息可以参考该主题包的开发者的配置说明来操作：</p>
-<p><a href="https://shen-yu.gitee.io/2019/ayer/" target="_blank" rel="noopener">Ayer中文说明</a> </p>
+<p>如果在目录下找不到文件夹，请显示隐藏文件夹即可。快捷键：<code>command+shift+.</code></p>
 </blockquote>
+<p>准确复制文件中所有内容，进入github主页，点击右上角头像进入settings，选择SSH and GPG keys，再点击New SSH Key。将内容复制进key，title可以为空。最后Add SSH key。</p>
+<p>输入下面command 测试是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@GitHub.com</span><br></pre></td></tr></table></figure>
+
+<p>出现下面内容，则说明SSH Keys配置成功了！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &#39;GitHub.com (207.97.227.239)&#39; can&#39;t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes&#x2F;no)?&lt;输入yes&gt;</span><br><span class="line">Hi kerryli1007! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<blockquote>
+<p>参考链接：<a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">Connecting to Github with SSH</a>  <a href="https://blog.csdn.net/weixin_41160054/article/details/89531921" target="_blank" rel="noopener">参考博客</a></p>
+</blockquote>
+<h3 id="设置推送到GitHub"><a href="#设置推送到GitHub" class="headerlink" title="设置推送到GitHub"></a>设置推送到GitHub</h3><p>修改 <code>MyHexoBlog</code>目录下的 <code>_config.yml</code>文件，查询找到 <code>deploy</code> 配置如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:user<span class="emphasis">_name/user_</span>name.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>修改后保存，然后执行command 安装部署插件（<em>参考问题1</em>）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>再执行配置命令<code>hexo deploy</code>就可以在浏览器中打开链接<code>http://user_name.github.io/</code> 就可以看到自己的博客了。（<em>参考问题2</em>）</p>
+<h3 id="出现问题"><a href="#出现问题" class="headerlink" title="出现问题"></a>出现问题</h3><ol>
+<li><p>安装Deployer插件时up主这边报错，提示 <code>No  Xcode or CLT  version detected !</code> </p>
+<p><img src="/2020/02/20/Mac-hexo-3-github/mac_hexo_deployer_error.png" alt="mac_hexo_deployer_error"></p>
+<p>执行以下Command 安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rm -rf $(xcode-select -<span class="built_in">print</span>-path)</span><br><span class="line">$ xcode-select --install</span><br></pre></td></tr></table></figure>
+
+<p>会弹出下载安装向导，点击安装即可。</p>
+<p>安装完成后再执行 <code>npm install hexo-deployer-git --save</code>，显示安装成功。</p>
+<p><img src="/2020/02/20/Mac-hexo-3-github/mac_hexo_deployer_success.png" alt="mac_hexo_deployer_success"></p>
+</li>
+</ol>
+<ol start="2">
+<li><p>执行<code>hexo deploy</code> 部署时报错 <code>fatal: The remote end hung up unexpectedly</code></p>
+<p><img src="/2020/02/20/Mac-hexo-3-github/mac_hexo_deployer_error.png" alt="mac_hexo_deployer_error"></p>
+<p>是由于上传大小超过了git的限制。</p>
+<p>我们找到 <code>/Users/your_user_directory/your_blog_name/.deploy_git/.git/config</code>添加下图内容进去，保存。（<code>command+shift+.</code> 显示隐藏文件夹）</p>
+<p><img src="/2020/02/20/Mac-hexo-3-github/mac_hexo_git_config.png" alt="mac_hexo_git_config"></p>
+<p>参考：<a href="https://www.jianshu.com/p/8919e886e108" target="_blank" rel="noopener">地址</a></p>
+<p>再执行 <code>hexo deploy</code>,显示成功。</p>
+<p><img src="/2020/02/20/Mac-hexo-3-github/mac_hexo_deploy_success.png" alt="mac_hexo_deploy_success"></p>
+</li>
+</ol>
 
       
       <!-- reward -->
@@ -202,7 +241,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://luoyedemeng.github.io/2020/02/19/Mac-hexo-2-theme/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://luoyedemeng.github.io/2020/02/20/Mac-hexo-3-github/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -220,19 +259,10 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/02/20/Mac-hexo-3-github/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Hexo GitHub设置
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/02/18/Mac-hexo-1-install/" class="article-nav-link">
+      <a href="/2020/02/19/Mac-hexo-2-theme/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hexo 安装</div>
+        <div class="article-nav-title">Hexo 主题安装</div>
       </a>
     
   </nav>
