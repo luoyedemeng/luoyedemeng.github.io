@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="工作,生活,学习,旅行，We&#39;re in love" />
+   
+  <meta name="description" content="Someting to do,Someting to lvoe,Somting to hope for" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    Hexo 其他插件 |  HELLO WINTER .
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-Mac-hexo-5-plugin" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Hexo 其他插件
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/20/Mac-hexo-5-plugin/" class="article-date">
+  <time datetime="2020-02-20T08:43:33.000Z" itemprop="datePublished">2020-02-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+  </div>
+
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.4k字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">6分钟</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>本篇将介绍一些Hexo好用的插件，可以更加丰富你的Hexo博客的功能。</p>
+<h3 id="图片插件"><a href="#图片插件" class="headerlink" title="图片插件"></a>图片插件</h3><p>1.设置站点配置 <code>_config.yml</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>2.安装插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
+
+<p>3.引用图片 </p>
+<p>![例子](例子.png)  这里直接写图片名称即可，hexo在generate 时会生成public文件夹，文章和图片生成在同一目录下。</p>
+<p>如果生成的文章图片无法正常显示，请F12看下图片的引用路径，在文章编辑中正确编辑图片路径。</p>
+<p>如果出现 /.com/ 这样的路径错误问题，这是插件的bug 请卸载重新安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-asset-image</span><br><span class="line">$ npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<p>上面command 在你博客的主目录下执行,如果不是请先转到该目录下，如： <code>cd MyHexoBlog</code></p>
+<h3 id="Tags-amp-Categories-插件"><a href="#Tags-amp-Categories-插件" class="headerlink" title="Tags &amp; Categories 插件"></a>Tags &amp; Categories 插件</h3><p>1.安装Tags&amp;Categories生成插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-category --save</span><br><span class="line">$ npm install hexo-generator-tag --save</span><br></pre></td></tr></table></figure>
+
+<p>2.生成Tags&amp;Categories Page页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>3.编辑Tags&amp;Categories Page</p>
+<p>进入 source/tags/index.md &amp; source/categories/index.md,编辑头部的front-matter 区域分别添加 <code>type: &quot;tags&quot;</code>和<code>type: &quot;categories&quot;</code></p>
+<blockquote>
+<p>我使用的主题 Ayer 同时还需要分别添加 <code>layout: &quot;tags&quot;</code> 和 <code>layout: &quot;categories&quot;</code></p>
+</blockquote>
+<p>4.配置tags和categories 路径</p>
+<p>到主题文件下的 <code>_config.yml</code> 文件配置 menu中的 tags和categories 路径</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">/schedule</span></span><br><span class="line">  <span class="attr">sitemap:</span> <span class="string">/sitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>5.发布新文章使用 「tags」「categories」</p>
+<p>只需在文章开头添加如下代码：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 利用GitHub和HEXO免费搭建个人博客高级</span><br><span class="line">date: 2019-01-29 22:58:56</span><br><span class="line">tags: [hexo建站,hexo部署,github部署,个人博客]      #添加的标签</span><br><span class="line">categories: hexo博客                              #添加的分类</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>小tip:每次的手输入 categories 我们可以在/scaffolds/post.md 添加如下代码，这样每次新建文章，就自动有了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:           #新加</span><br><span class="line">categories:     #新加</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>参考： <a href="https://www.jianshu.com/p/e17711e44e00" target="_blank" rel="noopener">参考1</a></p>
+<p>6.实现多个 categories 和嵌套category</p>
+<p>下面的分类会将该分章放到 <code>Java/Servlet</code>这个分类下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">  - Java</span><br><span class="line">  - Servlet</span><br></pre></td></tr></table></figure>
+
+<p>同样的作用我们也可以这样写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">categories: [Java, Servlet]</span><br></pre></td></tr></table></figure>
+
+<p>上面两种方法最终效果一样，都是将文章放在了一个子分类的目录下，效果下图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">|*Java(2)</span><br><span class="line">	|--*Servlet(2)</span><br></pre></td></tr></table></figure>
+
+<p>如果我们的要求是将文章同时分到多个不同的分类中呢，我们应该这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">  -[Java]</span><br><span class="line">  -[Servlet]</span><br></pre></td></tr></table></figure>
+
+<p>这样，就可以将上面的文章分类到 <code>Java</code> 和 <code>Servlet</code> 这两个不同的目录中了。</p>
+<p>扩展一下，如果我们将其分类到 <code>Java/Servlet</code> 和 <code>Programming</code> 两个不同的目录下，我们应该如下写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">  -[Java, Servlet]</span><br><span class="line">  -[Programming]</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://www.jianshu.com/p/bff1b1845ac9" target="_blank" rel="noopener">参考2</a></p>
+<h3 id="文章置顶插件"><a href="#文章置顶插件" class="headerlink" title="文章置顶插件"></a>文章置顶插件</h3><p>安装置顶插件，输入以下command</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>在文章的front-matter 区域添加 top: ture</p>
+<h3 id="搜索插件"><a href="#搜索插件" class="headerlink" title="搜索插件"></a>搜索插件</h3><p><a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="noopener">hexo-generator-searchdb</a> 搜索</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是ayer目录下的）:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line"> <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line"> <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line"> <span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="订阅插件"><a href="#订阅插件" class="headerlink" title="订阅插件"></a>订阅插件</h3><p><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generate-feed</a> RSS</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是ayer目录下的）:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">    <span class="built_in">type</span>: atom</span><br><span class="line">    path: atom.xml</span><br><span class="line">    <span class="built_in">limit</span>: 20</span><br><span class="line">    hub:</span><br><span class="line">    content:</span><br><span class="line">    content_limit: 140</span><br><span class="line">    content_limit_delim: <span class="string">' '</span></span><br><span class="line">    order_by: -date</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="文章目录插件"><a href="#文章目录插件" class="headerlink" title="文章目录插件"></a>文章目录插件</h3><p>用Tocbot解析文章标题并生成目录</p>
+<p>将以下配置复制到你ayer目录下的 <code>_config.yml</code> 里：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Toc</span></span><br><span class="line"> toc: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>当然你可能并不想所有文章都生成悬浮目录，你可以在文章顶部的配置中加一行来进行关闭：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">toc: <span class="literal">false</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="评论插件"><a href="#评论插件" class="headerlink" title="评论插件"></a>评论插件</h3><p>很多主题集成了Valine，所以配置起来非常简单，而且页面也是非常简洁。</p>
+<p>1.获取appId、appKey</p>
+<p>注册登录leancloud，然后创建应用。点击应用进去，设置-安全中心 在Web安全域名中添加白名单</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:4000</span><br><span class="line">http:&#x2F;&#x2F;luoyedemeng.com</span><br><span class="line">https:&#x2F;&#x2F;luoyedemeng.github.io</span><br></pre></td></tr></table></figure>
+
+<p>设置-应用Keys,拷贝AppID和AppKey</p>
+<p>2.Hexo中配置</p>
+<p>打开根目录下的theme/ayer下的<strong>_config.yml</strong>配置文件，因为ayer默认已经支持valine了，所以配置so easy!拿到上步的的appid,appkey。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)</span></span><br><span class="line"><span class="comment"># 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可</span></span><br><span class="line"><span class="attr">leancloud:</span>  </span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">app_id:</span> <span class="comment">#你的appid</span></span><br><span class="line">  <span class="attr">app_key:</span> <span class="comment">#你的appkey</span></span><br><span class="line"><span class="comment"># Valine配置</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># 是否启用</span></span><br><span class="line">  <span class="attr">verify:</span> <span class="literal">false</span> <span class="comment"># 是否启用防垃圾验证</span></span><br><span class="line">  <span class="attr">notify:</span> <span class="literal">false</span> <span class="comment"># 是否开启邮件提醒(https://valine.js.org/notify.html)</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">mp</span> <span class="comment"># 头像样式(https://valine.js.org/avatar.html)</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">给我的文章加点评论吧~</span> <span class="comment"># placeholder</span></span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://www.jianshu.com/p/986c4ab61ae5" target="_blank" rel="noopener">https://www.jianshu.com/p/986c4ab61ae5</a></p>
+<h3 id="音乐、视频插件"><a href="#音乐、视频插件" class="headerlink" title="音乐、视频插件"></a>音乐、视频插件</h3><p>两个好用的hexo插件：</p>
+<p><a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a>  <a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">hexo-tag-dplayer</a> </p>
+<p>安装音乐播放aplayer</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-tag-aplayer</span><br></pre></td></tr></table></figure>
+
+<p>在markdown内添加以下代码：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% aplayer "歌名" "歌手" "音乐地址"  "封面图片" "autoplay=false" %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>安装视频播放dplayer</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-tag-dplayer</span><br></pre></td></tr></table></figure>
+
+<p>在markdown内添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dplayer &quot;视频地址&quot;  &quot;pic&#x3D;封面图片&quot; &quot;loop&#x3D;yes&quot; &quot;theme&#x3D;#FADFA3&quot; &quot;autoplay&#x3D;false&quot; &quot;token&#x3D;tokendemo&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://www.jianshu.com/p/26a7fc7cc185" target="_blank" rel="noopener">https://www.jianshu.com/p/26a7fc7cc185</a></p>
+<h3 id="安装插件遇到的问题"><a href="#安装插件遇到的问题" class="headerlink" title="安装插件遇到的问题"></a>安装插件遇到的问题</h3><p>安装插件模块一直报错：超时或者网络挂起 <a href="https://stackoverflow.com/questions/20397883/npm-doesnt-install-any-modules-network-socket-hangs-up" target="_blank" rel="noopener">network socket hangs up</a></p>
+<p>解决方案：</p>
+<p>1.先清除掉以前的代理设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> proxy null</span><br><span class="line">npm config <span class="built_in">set</span> https-proxy null</span><br></pre></td></tr></table></figure>
+
+<p>也可以先通过以下代码查看代理设置，如果返回null那就不需要清理。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get proxy</span><br><span class="line">npm config get https-proxy</span><br></pre></td></tr></table></figure>
+
+<p>2.重新设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config registry http://registry.cnpmjs.org/</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://blog.csdn.net/weixin_42711399/article/details/84350368" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42711399/article/details/84350368</a></p>
+
+      
+      <!-- reward -->
+      
+      <div id="reward-btn">
+        打赏
+      </div>
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>版权声明： </strong s>
+              本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow"
+                target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://luoyedemeng.github.io/2020/02/20/Mac-hexo-5-plugin/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+    
+      <a href="/2020/02/20/Mac-hexo-4-article/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Hexo 文章发布</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: 'BcSAphq0ouU80A7fEtVLqd3S-gzGzoHsz',
+        app_key: 'nCIVNe28D66s4bHB9asF4yN6',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        悲伤的牛河
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+      <aside class="sidebar">
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="HELLO WINTER ."></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/gallery">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/welove">WeLove</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="0" height="0" src="//music.163.com/outchain/player?type=2&amp;id=1416485248&amp;auto=1&amp;height=32"></iframe>
+      
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯latte吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechatpay.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<script src="/js/share.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+    strings: ['面朝大海，春暖花开','愿你一生努力，一生被爱','想要的都拥有，得不到的都释怀'],
+    startDelay: 0,
+    typeSpeed: 250,
+    loop: true,
+    backSpeed: 100,
+    showCursor: true
+    });
+  } catch (err) {
+  }
+  
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer:'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+
+<script src="/js/ayer.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  </div>
+</body>
+
+</html>

@@ -67,7 +67,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.1k字</span>
+            <span class="post-count">1.2k字</span>
         </span>
     </span>
 
@@ -144,12 +144,20 @@
 <p>参考链接：<a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">Connecting to Github with SSH</a>  <a href="https://blog.csdn.net/weixin_41160054/article/details/89531921" target="_blank" rel="noopener">参考博客</a></p>
 </blockquote>
 <h3 id="设置推送到GitHub"><a href="#设置推送到GitHub" class="headerlink" title="设置推送到GitHub"></a>设置推送到GitHub</h3><p>修改 <code>MyHexoBlog</code>目录下的 <code>_config.yml</code>文件，查询找到 <code>deploy</code> 配置如下：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:user<span class="emphasis">_name/user_</span>name.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:user<span class="emphasis">_name/user_</span>name.github.io.git  # user_name是你github 用户名</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
 <p>修改后保存，然后执行command 安装部署插件（<em>参考问题1</em>）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>再执行配置命令<code>hexo deploy</code>就可以在浏览器中打开链接<code>http://user_name.github.io/</code> 就可以看到自己的博客了。（<em>参考问题2</em>）</p>
+<h3 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h3><p>每次部署可以按以下步骤来执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>其他一些常用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new<span class="string">"postName"</span> <span class="comment">#新建文章</span></span><br><span class="line">$ hexo new page<span class="string">"pageName"</span> <span class="comment">#新建页面</span></span><br><span class="line">$ hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">$ hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">$ hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></span><br><span class="line">$ hexo <span class="built_in">help</span> <span class="comment"># 查看帮助</span></span><br><span class="line">$ hexo version <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="设置自己的域名"><a href="#设置自己的域名" class="headerlink" title="设置自己的域名"></a>设置自己的域名</h3><p>在Hexo的source目录下添加CNAME文件，没有任何后缀，在文件中填写要绑定的域名，如<code>www.user_name.net</code>。<br>然后设置域名解析，添加解析设置，纪录类型为CNAME,主机纪录www，解析线路为默认，然后纪录值填写github项目名称，如<code>user_name.github.io</code>，保存。<br>在Hexo中重新部署生成即可用自己的域名访问博客了。</p>
 <p>也可以不用上述操作，添加解析设置时，选择记录类型为A(执行IP地址)。</p>
 <p>参考地址： <a href="https://www.jianshu.com/p/da20ddc03cdf" target="_blank" rel="noopener">域名绑定</a></p>
@@ -262,6 +270,15 @@
   
   <nav class="article-nav">
     
+      <a href="/2020/02/20/Mac-hexo-4-article/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Hexo 文章发布
+          
+        </div>
+      </a>
+    
     
       <a href="/2020/02/19/Mac-hexo-2-theme/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
@@ -285,8 +302,8 @@
 <script>
     new Valine({
         el: '#vcomments',
-        app_id: '',
-        app_key: '',
+        app_id: 'BcSAphq0ouU80A7fEtVLqd3S-gzGzoHsz',
+        app_key: 'nCIVNe28D66s4bHB9asF4yN6',
         path: window.location.pathname,
         notify: 'false',
         verify: 'false',
@@ -414,6 +431,9 @@
 <nav class="navbar navbar-bottom">
   <ul class="nav">
     <li class="nav-item">
+      
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="0" height="0" src="//music.163.com/outchain/player?type=2&amp;id=1416485248&amp;auto=1&amp;height=32"></iframe>
+      
       
       <a class="nav-item-link nav-item-search"  title="Search">
         <i class="ri-search-line"></i>
