@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="工作,生活,学习,旅行，We&#39;re in love" />
+   
+  <meta name="description" content="Someting to do,Someting to lvoe,Somting to hope for" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    软件破解 |  HELLO WINTER .
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-software-cracking" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  软件破解
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/04/27/software-cracking/" class="article-date">
+  <time datetime="2020-04-27T08:50:02.000Z" itemprop="datePublished">2020-04-27</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/">软件破解</a>
+  </div>
+
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.1k字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">3分钟</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>前段时间由于一朋友的需要，寻找一套门店服务行业的软件，主要用于店员以及会员的管理。自己从网上搜了一款两个人合计后觉得可以，功能齐全操作方便页面简单且是单机版，随选择采用这款软件。</p>
+<p>问题是虽然软件是破解版的，但软件上的很多文字链接和图片是官网的信息，需要将其替换或抹除掉。本人没有相关软件开发经验，纯小白，只能自行网上搜索相关的操作方法。</p>
+<p>该篇文章将讲述自己的具体的操作步骤及工具，由于间隔时间太长中间很多内容忘记了，当初参考的一些网址也没能保存，只能记录大概的几个步骤，有感兴趣的小伙伴可自行根据关键字搜索相关知识学习。</p>
+<p><em>（支持正版，仅供学习参考）</em></p>
+<h3 id="1-查看软件加壳信息"><a href="#1-查看软件加壳信息" class="headerlink" title="1.查看软件加壳信息"></a>1.查看软件加壳信息</h3><p>使用peid工具查看该软件是否加壳</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427172232052.png" alt="image-20200427172232052"></p>
+<p>查看到该软件使用了ASPack 进行了加壳，现在知道该软件已加壳我们就要进行下一步脱壳。</p>
+<blockquote>
+<p>具体PEiD工具用法，请自行百度</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="2-使用OD工具进行脱壳"><a href="#2-使用OD工具进行脱壳" class="headerlink" title="2.使用OD工具进行脱壳"></a>2.使用OD工具进行脱壳</h3><p>脱壳的方法很多种，我们目前使用最常用的ESP定律进行手动脱壳。</p>
+<ul>
+<li>用OllyDBG工具导入要破解的软件</li>
+</ul>
+<p><img src="/2020/04/27/software-cracking/image-20200427173457442.png" alt="image-20200427173457442"></p>
+<ul>
+<li>按F8进行单步调试，当出现ESP 和 EIP同时突出变红时，说明可以使用ESP定律</li>
+</ul>
+<p><img src="/2020/04/27/software-cracking/image-20200427174118302.png" alt="image-20200427174118302"></p>
+<ul>
+<li>ESP定律脱壳法</li>
+</ul>
+<p>拷贝ESP值，在命令框中输入 <code>dd 0012FFA4</code> 按回车，转到堆栈esp内容所指的位置。（或直接在该行右键-&gt;数据窗口中跟踪）</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427174643970.png" alt="image-20200427174643970"></p>
+<p>在堆栈中选中这一行，右键-&gt;断点-&gt;硬件访问-&gt;字 。可在菜单栏-&gt;调试-&gt;硬件断点中查看刚设置的断点信息</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427175023436.png" alt="image-20200427175023436"></p>
+<p><img src="/2020/04/27/software-cracking/image-20200427175529722.png" alt="image-20200427175529722"></p>
+<p>按F9执行到该断点位置</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427181821544.png" alt="image-20200427181821544"></p>
+<p>按F8单步执行，直到跳入OEP领空。（每种开发语言和所加的不同的壳，所对应的反汇编是不一样的，都有各自特点的OEP入口标识。请不要参考此示例的截图内容，可百度相关编程语言及所加壳的特性及反汇编原理，脱壳的方法是一致的，只是程序入口样子不同而已）</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427182806031.png" alt="image-20200427182806031"></p>
+<p>找到OEP入口点后，我们在入口处右键-&gt;用OllyDump脱壳调试进程</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427183259146.png" alt="image-20200427183259146"></p>
+<p>会弹出一个窗口，点击脱壳即可。</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427183506608.png" alt="image-20200427183506608"></p>
+<ul>
+<li>用peid检查是否脱壳成功，该程序是用Delphi 开发的。</li>
+</ul>
+<p><img src="/2020/04/27/software-cracking/image-20200427183712888.png" alt="image-20200427183712888"></p>
+<h3 id="3-解压软件资源"><a href="#3-解压软件资源" class="headerlink" title="3.解压软件资源"></a>3.解压软件资源</h3><p>很多软件在发布时都将资源（如图片等）进行了压缩，如果对未解压资源的脱壳软件进行编辑保存，再运行软件会报错。使用freeRes工具进行解压</p>
+<p>用freeRes打开脱壳的程序，弹出资源错误已被压缩是否需要释放资源进行分析，点击是</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427185057394.png" alt="image-20200427185057394"></p>
+<p>分析完后，点击菜单栏 功能-&gt;释放压缩资源</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427185354971.png" alt="image-20200427185354971"></p>
+<h3 id="4-编辑修改软件内容"><a href="#4-编辑修改软件内容" class="headerlink" title="4.编辑修改软件内容"></a>4.编辑修改软件内容</h3><ul>
+<li>c32asm工具可直接对软件文字内容进行编辑修改。</li>
+</ul>
+<p>打开工具，导入要修改的软件文件，弹出框选择十六进制模式</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427191033375.png" alt="image-20200427191033375"></p>
+<p>Ctrl+F,搜索你要修改的文字或字符，输入你要替换成的文本内容，点击替换。（注意：汉字占用两个字节，这里要替换的字节大小必须跟原始大小一致）</p>
+<p><img src="/2020/04/27/software-cracking/image-20200427191353427.png" alt="image-20200427191353427"></p>
+<ul>
+<li>Restorator 或 eXeScope 工具对其内容进行编辑（如文本，菜单栏，图片，控件的属性等）</li>
+</ul>
+<p><img src="/2020/04/27/software-cracking/image-20200427192059121.png" alt="image-20200427192059121"></p>
+<h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>由于对破解一无所知，花费了将近一周的时间才一步步将所有遇到的问题解决。此篇文章没有很详细的讲解其过程，中间还有一些细节处理也没写到，但整体流程如此。仅供那些像我一样小白的同学提供些帮助，具体每一步的详情操作，原理或工具使用请百度。</p>
+<p>下面提供自己所有收集和使用的破解工具</p>
+<p>链接：<a href="https://pan.baidu.com/s/12gu812htx7O6yxnTce3MIQ" target="_blank" rel="noopener">https://pan.baidu.com/s/12gu812htx7O6yxnTce3MIQ</a><br>提取码：nm91 </p>
+
+      
+      <!-- reward -->
+      
+      <div id="reward-btn">
+        打赏
+      </div>
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>版权声明： </strong s>
+              本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow"
+                target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://luoyedemeng.github.io/2020/04/27/software-cracking/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%B4%E8%A7%A3/" rel="tag">破解</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%B1%E5%A3%B3/" rel="tag">脱壳</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+    
+      <a href="/2020/02/25/Site-Navigation/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Site Navigation Link</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: 'BcSAphq0ouU80A7fEtVLqd3S-gzGzoHsz',
+        app_key: 'nCIVNe28D66s4bHB9asF4yN6',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        悲伤的牛河
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+      <aside class="sidebar">
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="HELLO WINTER ."></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/gallery">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/welove">WeLove</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="0" height="0" src="//music.163.com/outchain/player?type=2&amp;id=1416485248&amp;auto=1&amp;height=32"></iframe>
+      
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯latte吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechatpay.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<script src="/js/share.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+    strings: ['面朝大海，春暖花开','愿你一生努力，一生被爱','想要的都拥有，得不到的都释怀'],
+    startDelay: 0,
+    typeSpeed: 250,
+    loop: true,
+    backSpeed: 100,
+    showCursor: true
+    });
+  } catch (err) {
+  }
+  
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer:'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+
+<script src="/js/ayer.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  </div>
+</body>
+
+</html>
